@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+                xmlns:controls="clr-namespace:PrismMauiApp.Controls"
+             x:Class="PrismMauiApp.Views.MainPage">
+  
+  <ScrollView>
+    <!--<VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+      <Image Source="prism.png"
+             SemanticProperties.Description="Cute dot net bot waving hi to you!"
+             HeightRequest="150" 
+             HorizontalOptions="Center" />
+
+      <Label Text="Hello, World!"
+             SemanticProperties.HeadingLevel="Level1"
+             FontSize="32"
+             HorizontalOptions="Center" />
+
+      <Label Text="Welcome to Prism for .NET MAUI"
+             SemanticProperties.HeadingLevel="Level2"
+             SemanticProperties.Description="Welcome to Prism for dot net Multi platform App U I"
+             FontSize="18"
+             HorizontalOptions="Center" />
+
+      <Button Text="{Binding Text}"
+              SemanticProperties.Hint="Counts the number of times you click"
+              Command="{Binding CountCommand}"
+              HorizontalOptions="Center" />
+
+    </VerticalStackLayout>-->
+
+    <Grid Style="{x:StaticResource GridBackground}" >
+
+
+      <!--<ListView  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  SelectedItem="{Binding SelectedMonkey}" Style="{x:StaticResource ListViewStyle}" VerticalScrollBarVisibility="Never" 
+	                                                     ItemsSource="{Binding Words}" >
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <Border x:Name="Border"
+                      StrokeThickness="4"
+                      Margin="15" 
+                      StrokeShape="Rectangle" 
+                      Background="#2B0B98"
+                      Padding="16,8" >
+              <Border.Shadow>
+                <Shadow 
+                  Offset="0,0"
+                Radius="10"
+                Opacity="1">
+                  <Shadow.Brush>
+                    <LinearGradientBrush>
+                      <GradientStop Color="Black"
+                                          Offset="0.1" />
+                      <GradientStop Color="Gray"
+                                          Offset="1.0" />
+                    </LinearGradientBrush>
+                  </Shadow.Brush>
+                </Shadow>
+              </Border.Shadow>
+              <Border.Stroke>
+                <LinearGradientBrush EndPoint="0,1">
+                  <GradientStop Color="Orange"
+                          Offset="0.1" />
+                  <GradientStop Color="Brown"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+              </Border.Stroke>
+              <Frame  BackgroundColor="LightGray">
+                <StackLayout>
+                  <Label Text="{Binding Name}" TextColor="Red"
+                      FontSize="Medium"
+                      FontAttributes="Bold" />
+                  <BoxView Color="Gray"
+                      HeightRequest="2"
+                      HorizontalOptions="Fill" />
+                  <Label Text="{Binding Translate}"/>
+                </StackLayout>
+              </Frame>
+            </Border>
+            </ViewCell>
+          </DataTemplate>
+
+        </ListView.ItemTemplate>
+      
+      </ListView>-->
+      <controls:CustomBarView x:Name="BottomBar" VerticalOptions="End" ItemsSource="{Binding ToolbarItems}" 
+                                        ItemSelected="{Binding ItemSelectionChangedCommand}"/>
+    </Grid>
+  </ScrollView>
+
+</ContentPage>

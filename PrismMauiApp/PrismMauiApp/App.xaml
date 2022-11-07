@@ -1,0 +1,28 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PrismMauiApp"
+             x:Class="PrismMauiApp.App">
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+        <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+
+      <Color x:Key="LightBackground">#FFFFFF</Color>
+      <Color x:Key="DarkBackground">#2c2c2e</Color>
+
+      <Style TargetType="ListView" x:Key="ListViewStyle">
+        <Setter Property="BackgroundColor" Value="Transparent"/>
+        <Setter Property="SeparatorVisibility" Value="None"/>
+        <Setter Property="SelectionMode" Value="None"/>
+        <Setter Property="HasUnevenRows" Value="True"/>
+      </Style>
+      
+      <Style TargetType="Grid" x:Key="GridBackground">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource DarkBackground},Light={StaticResource LightBackground}}"/>
+      </Style>
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

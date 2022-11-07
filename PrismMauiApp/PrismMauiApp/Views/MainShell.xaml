@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismMauiApp.Views.MainShell"
+                 xmlns:pages="clr-namespace:PrismMauiApp.Views"
+             Title="MainShell">
+  <TabBar>
+    <Tab Title="Sebastian"  PropertyChanged="Tab_PropertyChanged"
+         Icon="prism.png">
+      <ShellContent ContentTemplate="{DataTemplate pages:MainPage}" />
+    </Tab>
+    <Tab Title="Washington"
+         Icon="prism.png">
+      <ShellContent ContentTemplate="{DataTemplate pages:MainPage}" />
+    </Tab>
+    <Tab Title="Nora"
+         Icon="prism.png">
+      <ShellContent ContentTemplate="{DataTemplate pages:MainPage}" />
+    </Tab>
+  </TabBar>
+</Shell>

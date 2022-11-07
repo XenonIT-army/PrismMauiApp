@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismMauiApp.Controls.CustomBarView"
+           >
+  <Border  x:Name="Border"
+                      StrokeThickness="4"
+                      StrokeShape="Rectangle" 
+                      Background="#2B0B98"
+                      Padding="16,8" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Margin="20" BackgroundColor="Red">
+
+    <HorizontalStackLayout x:Name="HorizontalStackLayout" >
+
+    </HorizontalStackLayout>
+  </Border>
+</ContentView>
